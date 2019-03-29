@@ -12,12 +12,6 @@ This ontology is aimed at representing a genetic text graph. A converter for TEI
 | xml    | <http://www.w3.org/XML/1998/namespace>        |
 | xsd    | <http://www.w3.org/2001/XMLSchema#>           |
 
-## Example
-
-*see `tei-converter/out/sample.ttl`*
-
-![sample](/uploads/bb8c5558c797426bf4cce4bc0ab549e9/sample.JPG)
-
 ```turtle
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
