@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.hinkelmanns.at/tgo#"
+     xml:base="http://www.hinkelmanns.at/tgo"
+     xmlns:tgo2="http://www.hinkelmanns.at/tgo/#"
+     xmlns:tgo3="http://www.hinkelmanns.at/tgo/"
+     xmlns:tgo1="http://www.hinkelmanns.at/tgo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tgo="http:www.hinkelmanns.at/tgo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.hinkelmanns.at/tgo/">
+        <owl:versionIRI rdf:resource="urn:absolute:http//:www.hinkelmanns.at/tgo#v0.1/"/>
+        <dc:title xml:lang="en">Text.Graph.Ontoloy</dc:title>
+        <rdfs:label xml:lang="en">Text.Graph.Ontoloy [TGO]</rdfs:label>
+        <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
+        <dc:identifier xml:lang="en">http://www.hinkelmanns.at/tgo</dc:identifier>
+        <dc:title xml:lang="en">This is the Text.Graph.Ontology [TGO]. TGO is an approach to provide an ontology to encode linguistic historical text edition. It links itself to other ontologies and models like TEI and GOLD.</dc:title>
+        <dc:creator xml:lang="en">Peter Hinkelmanns</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/hasTeiEquivalent -->
+
+    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/hasTeiEquivalent">
+        <rdfs:comment>Used to link a class to its TEI P5 equivalent</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/#has_larger_linguistic_unit -->
+
+    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/#has_larger_linguistic_unit">
+        <rdfs:subPropertyOf rdf:resource="http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit -->
+
+    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit">
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/#has_smaller_linguistic_unit -->
+
+    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/#has_smaller_linguistic_unit">
+        <rdfs:subPropertyOf rdf:resource="http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/hasEnd -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/hasEnd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Path"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+        <dc:description xml:lang="en">hasEnd connects a Connector or a Path with its ending node</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/hasStart -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/hasStart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Path"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+        <dc:description xml:lang="en">hasStart connects a Connector or a Path with its starting node</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/usesConnector -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/usesConnector">
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Path"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hinkelmanns.at/tgo/weight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <dc:description xml:lang="en">A weight of a connections is interpreted relative to the other connections starting from the same token.
+I.e. if a token has two connections with weight 1 and 2, the connection with weight 1 precedes the connection with weight 2.</dc:description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Connector -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Connector">
+        <dc:description xml:lang="en">A connector represents the connection between two nodes.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/End -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/End">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+        <dc:description xml:lang="en">An end point for a token graph</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Node -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Node">
+        <dc:description xml:lang="en">All nodes of the text graph</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Path -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Path">
+        <dc:description xml:lang="en">A Path is a route through the text with a given start, end and waypoints</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Start -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Start">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+        <dc:description xml:lang="en">A start point for a token graph</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Token -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Token">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+        <dc:description xml:lang="en">A Token is the base unit of a Text. Token in this regard doesn&apos;t refere to a specific layer of text (word, sentence...).</dc:description>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
