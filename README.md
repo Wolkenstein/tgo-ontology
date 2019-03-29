@@ -1,2 +1,2 @@
 # tgo-ontology
-Text Text-Graph-Ontology
+The Text-Graph-Ontology
