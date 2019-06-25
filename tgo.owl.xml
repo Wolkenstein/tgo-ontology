@@ -3,6 +3,7 @@
      xml:base="http://www.hinkelmanns.at/tgo"
      xmlns:tgo2="http://www.hinkelmanns.at/tgo/#"
      xmlns:tgo3="http://www.hinkelmanns.at/tgo/"
+     xmlns:oa="http://www.w3.org/ns/oa#"
      xmlns:tgo1="http://www.hinkelmanns.at/tgo#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -58,46 +59,25 @@
     
 
 
-    <!-- http://www.hinkelmanns.at/tgo/hasTeiEquivalent -->
-
-    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/hasTeiEquivalent">
-        <rdfs:comment>Used to link a class to its TEI P5 equivalent</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.hinkelmanns.at/tgo/#has_larger_linguistic_unit -->
-
-    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/#has_larger_linguistic_unit">
-        <rdfs:subPropertyOf rdf:resource="http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit"/>
-        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
-        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit -->
-
-    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit">
-        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
-        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.hinkelmanns.at/tgo/#has_smaller_linguistic_unit -->
-
-    <owl:AnnotationProperty rdf:about="http://www.hinkelmanns.at/tgo/#has_smaller_linguistic_unit">
-        <rdfs:subPropertyOf rdf:resource="http://www.hinkelmanns.at/tgo/#has_relation_to_linguistic_unit"/>
-        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
-        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo#linguisticUnits"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://www.w3.org/2002/07/owl#sameAs -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/ns/oa#hasBody -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/oa#hasTarget -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -120,10 +100,33 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
-        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Path"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
         <dc:description xml:lang="en">hasEnd connects a Connector or a Path with its ending node</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/hasMember">
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/hasNext">
+        <owl:inverseOf rdf:resource="http://www.hinkelmanns.at/tgo/hasPreceding"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/hasPreceding -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/hasPreceding">
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
     </owl:ObjectProperty>
     
 
@@ -136,8 +139,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
-        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Path"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
         <dc:description xml:lang="en">hasStart connects a Connector or a Path with its starting node</dc:description>
     </owl:ObjectProperty>
@@ -176,6 +177,12 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -187,10 +194,40 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     
 
 
+    <!-- http://www.hinkelmanns.at/tgo/Border -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Border">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+        <rdfs:comment xml:lang="en">A border marks a start or end point of a text</rdfs:comment>
+        <rdfs:label xml:lang="en">Border</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.hinkelmanns.at/tgo/Connector -->
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Connector">
-        <dc:description xml:lang="en">A connector represents the connection between two nodes.</dc:description>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasNext"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasPreceding"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/weight"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A connector is a rdf node used to represent a weighted connection between two nodes</rdfs:comment>
+        <rdfs:label xml:lang="en">Connector</rdfs:label>
     </owl:Class>
     
 
@@ -198,8 +235,80 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <!-- http://www.hinkelmanns.at/tgo/End -->
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/End">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Border"/>
+        <rdfs:comment xml:lang="en">The ending point of of a text</rdfs:comment>
+        <rdfs:label xml:lang="en">End</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Grapheme -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Grapheme">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
-        <dc:description xml:lang="en">An end point for a token graph</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/GraphemeConnector -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/GraphemeConnector">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasNext"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Grapheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasPreceding"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Grapheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Group -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Group">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">A group is a collection of tokes which do not need to be in order</rdfs:label>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Morpheme -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Morpheme">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/MorphemeConnector -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/MorphemeConnector">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasNext"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Morpheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasPreceding"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Morpheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -207,7 +316,8 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <!-- http://www.hinkelmanns.at/tgo/Node -->
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Node">
-        <dc:description xml:lang="en">All nodes of the text graph</dc:description>
+        <rdfs:comment xml:lang="en">A Node is the base class for all nodes of the text graph.</rdfs:comment>
+        <rdfs:label xml:lang="en">Node</rdfs:label>
     </owl:Class>
     
 
@@ -215,7 +325,42 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <!-- http://www.hinkelmanns.at/tgo/Path -->
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Path">
-        <dc:description xml:lang="en">A Path is a route through the text with a given start, end and waypoints</dc:description>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasEnd"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasStart"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Path is a route from one node to another via their connections. and can be defined by start and end points and waypoints</rdfs:comment>
+        <rdfs:label xml:lang="en">Path</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Phrase -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Phrase">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Sentence -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Sentence">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Path"/>
     </owl:Class>
     
 
@@ -223,8 +368,32 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <!-- http://www.hinkelmanns.at/tgo/Start -->
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Start">
-        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
-        <dc:description xml:lang="en">A start point for a token graph</dc:description>
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Border"/>
+        <rdfs:comment xml:lang="en">The starting point of of a text</rdfs:comment>
+        <rdfs:label xml:lang="en">Start</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Text -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Text">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Path"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/TextStage -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/TextStage">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Text"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/usesConnector"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">TextStage</rdfs:label>
     </owl:Class>
     
 
@@ -233,8 +402,118 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Token">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
-        <dc:description xml:lang="en">A Token is the base unit of a Text. Token in this regard doesn&apos;t refere to a specific layer of text (word, sentence...).</dc:description>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasEnd"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.hinkelmanns.at/tgo/Morpheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasStart"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.hinkelmanns.at/tgo/Morpheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Token is a seperated string, mostly seperated by whitespace in the source document.</rdfs:comment>
+        <rdfs:label xml:lang="en">Token</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/TokenConnector -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/TokenConnector">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasNext"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasPreceding"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Word -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Word">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/oa#Annotation -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#Annotation">
+        <rdfs:label>Annotation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/oa#hasBody -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <rdfs:label xml:lang="en">hasBody</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/oa#hasTarget -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasTarget">
+        <rdfs:label xml:lang="en">hasTarget</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/oa#"/>
+        <rdfs:comment>The object of the relationship is a resource that is a body of the Annotation.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/oa#hasTarget">
+        <rdfs:comment>The relationship between an Annotation and its Target.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/oa#"/>
+    </rdf:Description>
 </rdf:RDF>
 
 
