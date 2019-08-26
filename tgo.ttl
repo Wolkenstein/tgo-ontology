@@ -1,0 +1,503 @@
+@prefix : <http://www.hinkelmanns.at/tgo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tgo: <http://www.hinkelmanns.at/tgo/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.hinkelmanns.at/tgo/> .
+
+<http://www.hinkelmanns.at/tgo/> rdf:type owl:Ontology ;
+                                  owl:versionIRI <http://www.hinkelmanns.at/tgo/0.1/> ;
+                                  <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                  dc:title "Text.Graph.Ontoloy"@en ;
+                                  owl:versionInfo "0.1"@en ;
+                                  dc:description "This is the Text.Graph.Ontology [TGO]. TGO is an approach to provide an ontology to encode linguistic historical text edition."@en ;
+                                  dc:identifier "http://www.hinkelmanns.at/tgo"@en ;
+                                  dc:creator "Peter Hinkelmanns"@en ;
+                                  rdfs:label "Text.Graph.Ontoloy"@en ;
+                                  dc:date "2019-08-26"@en ;
+                                  dc:creator <https://orcid.org/0000-0001-8618-0185> ;
+                                  dcterms:modified "2019-08-26"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+dc:date rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+dc:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/oa#hasBody
+oa:hasBody rdf:type owl:AnnotationProperty ;
+           rdfs:domain oa:Annotation .
+
+
+###  http://www.w3.org/ns/oa#hasTarget
+oa:hasTarget rdf:type owl:AnnotationProperty ;
+             rdfs:domain oa:Annotation .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.hinkelmanns.at/tgo/endOfText
+tgo:endOfText rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain tgo:WordEnd ;
+              rdfs:range tgo:Text ;
+              dc:description "'endOfText' marks a 'WordEnd' by refering to a 'Text' as the end of this 'Text'."@en ;
+              dc:title "end of text"@en ;
+              rdfs:label "end of text"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/endOfWord
+tgo:endOfWord rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain tgo:CharacterEnd ;
+              rdfs:range tgo:Word ;
+              dc:description "'endOf'Word' marks a 'CharacterEnd' by refering to a 'Word' as the end of this 'Word'."@en ;
+              dc:title "end of word"@en ;
+              rdfs:label "end of word"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/from
+tgo:from rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain tgo:Connector ;
+         rdfs:range tgo:Start ,
+                    tgo:Token ;
+         dc:description "'from' names the relation between a connector and a 'start' node or 'token'."@en ;
+         dc:title "from"@en ;
+         rdfs:label "from"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/fromCharacter
+tgo:fromCharacter rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain tgo:CharacterConnector ;
+                  rdfs:range tgo:Character ,
+                             tgo:CharacterStart ;
+                  dc:description "'fromCharacter' names the relation between a 'CharacterConnector' and a 'CharacterStart' node or 'Character'."@en ;
+                  dc:title "from Character"@en ;
+                  rdfs:label "from Character"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/fromWord
+tgo:fromWord rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain tgo:WordConnector ;
+             rdfs:range tgo:Word ,
+                        tgo:WordStart ;
+             dc:description "'fromWord' names the relation between a 'WordConnector' and a 'WordStart' node or 'Word'."@en ;
+             dc:title "from word"@en ;
+             rdfs:label "from word"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/partOfCharacterGroup
+tgo:partOfCharacterGroup rdf:type owl:ObjectProperty ;
+                         rdfs:domain tgo:CharacterGroup ;
+                         rdfs:range tgo:Character ;
+                         dc:description "'Character' is part of 'CharacterGroup'."@en ;
+                         dc:title "part of character group"@en ;
+                         rdfs:label "part of character group"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/partOfGroup
+tgo:partOfGroup rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain tgo:Token ;
+                rdfs:range tgo:Group ;
+                dc:description "The edge between a 'Token' and a 'Group'"@en ;
+                dc:title "part of group"@en ;
+                rdfs:label "part of group"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/partOfStage
+tgo:partOfStage rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain tgo:Connector ;
+                rdfs:range tgo:Stage ;
+                dc:description "The edge between a 'Connector' and a 'Stage'."@en ;
+                dc:title "is part of stage"@en ;
+                rdfs:label "part of stage"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/partOfTextStage
+tgo:partOfTextStage rdf:type owl:ObjectProperty ;
+                    rdfs:domain tgo:WordConnector ;
+                    rdfs:range tgo:TextStage ;
+                    dc:description "The edge between a 'WordConnector' and a 'TextStage'."@en ;
+                    dc:identifier "part of text stage"@en ;
+                    rdfs:label "part of text stage"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/partOfWordGroup
+tgo:partOfWordGroup rdf:type owl:ObjectProperty ;
+                    rdfs:domain tgo:WordGroup ;
+                    rdfs:range tgo:Word ;
+                    dc:description "'Word' is part of 'WordGroup'."@en ;
+                    dc:title "part of word group"@en ;
+                    rdfs:label "part of word group"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/partOfWordStage
+tgo:partOfWordStage rdf:type owl:ObjectProperty ;
+                    rdfs:domain tgo:CharacterConnector ;
+                    rdfs:range tgo:WordStage ;
+                    dc:description "The edge between a 'CharacterConnector' and a 'WordStage'."@en ;
+                    dc:title "part of word stage"@en ;
+                    rdfs:label "part of word stage"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/startOfText
+tgo:startOfText rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain tgo:WordStart ;
+                rdfs:range tgo:Text ;
+                dc:description "'startOfText' marks a 'WordStart' by refering to a 'Text' as the start of this 'Text'."@en ;
+                dc:title "start of text"@en ;
+                rdfs:label "start of text"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/startOfWord
+tgo:startOfWord rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain tgo:CharacterStart ;
+                rdfs:range tgo:Word ;
+                dc:description "'startOf'Word' marks a 'CharacterStart' by refering to a 'Word' as the start of this 'Word'."@en ;
+                dc:title "start of word"@en ;
+                rdfs:label "start of word"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/to
+tgo:to rdf:type owl:ObjectProperty ;
+       rdfs:subPropertyOf owl:topObjectProperty ;
+       rdfs:domain tgo:Connector ;
+       rdfs:range tgo:End ,
+                  tgo:Token ;
+       dc:description "'to' names the relation between a connector and a 'end' node or 'token'."@en ;
+       dc:title "to"@en ;
+       rdfs:label "to"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/toCharacter
+tgo:toCharacter rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain tgo:CharacterConnector ;
+                rdfs:range tgo:Character ,
+                           tgo:CharacterEnd ;
+                dc:description "'toCharacter' names the relation between a 'CharacterConnector' and a 'CharacterEnd' node or 'Character'."@en ;
+                dc:title "to character"@en ;
+                rdfs:label "to character"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/toWord
+tgo:toWord rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain tgo:WordConnector ;
+           rdfs:range tgo:Word ,
+                      tgo:WordEnd ;
+           dc:description "'toWord' names the relation between a 'WordConnector' and a 'WordEnd' node or 'Word'."@en ;
+           dc:title "to word"@en ;
+           rdfs:label "to word"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.hinkelmanns.at/tgo/weight
+tgo:weight rdf:type owl:DatatypeProperty ;
+           rdfs:domain tgo:Connector ;
+           rdfs:range xsd:int ;
+           dc:description """A 'weight' of a connections is interpreted relative to the other connections starting from the same token.
+I.e. if a token has two connections with weight 1 and 2, the connection with weight 1 precedes the connection with weight 2."""@en ;
+           dc:title "weight"@en ;
+           rdfs:label "weight"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.hinkelmanns.at/tgo/Character
+tgo:Character rdf:type owl:Class ;
+              rdfs:subClassOf tgo:Token ;
+              dc:description "A segmented 'character' including diacritics or abbreviations on token level."@en ;
+              dc:title "Character"@en ;
+              rdfs:label "Character"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/CharacterConnector
+tgo:CharacterConnector rdf:type owl:Class ;
+                       rdfs:subClassOf tgo:Connector ;
+                       dc:description "Connector on character level."@en ;
+                       dc:title "Character Connector"@en ;
+                       rdfs:label "Character Connector"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/CharacterEnd
+tgo:CharacterEnd rdf:type owl:Class ;
+                 rdfs:subClassOf tgo:End ;
+                 dc:description "End node on character level."@en ;
+                 dc:title "Character End"@en ;
+                 rdfs:label "Character End"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/CharacterGroup
+tgo:CharacterGroup rdf:type owl:Class ;
+                   rdfs:subClassOf tgo:Group ;
+                   dc:description "A annotation ‘CharacterGroup’ of Characters."@en ;
+                   dc:title "Character Group"@en ;
+                   rdfs:label "Character Group"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/CharacterStart
+tgo:CharacterStart rdf:type owl:Class ;
+                   rdfs:subClassOf tgo:Start ;
+                   dc:description "Start node on character level."@en ;
+                   dc:title "Character Start"@en ;
+                   rdfs:label "Character Start"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/Connector
+tgo:Connector rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty tgo:to ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass tgo:Node
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty tgo:weight ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:int
+                              ] .
+
+
+###  http://www.hinkelmanns.at/tgo/End
+tgo:End rdf:type owl:Class ;
+        rdfs:subClassOf tgo:Node .
+
+
+###  http://www.hinkelmanns.at/tgo/Group
+tgo:Group rdf:type owl:Class .
+
+
+###  http://www.hinkelmanns.at/tgo/Node
+tgo:Node rdf:type owl:Class .
+
+
+###  http://www.hinkelmanns.at/tgo/Stage
+tgo:Stage rdf:type owl:Class ;
+          dc:description "A 'Stage' represents a stage of an instance."@en ;
+          dc:title "Stage"@en ;
+          rdfs:label "Stage"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/Start
+tgo:Start rdf:type owl:Class ;
+          rdfs:subClassOf tgo:Node .
+
+
+###  http://www.hinkelmanns.at/tgo/Text
+tgo:Text rdf:type owl:Class ;
+         dc:description "Basic node for a text."@en ;
+         dc:title "Text"@en ;
+         rdfs:label "Text"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/TextStage
+tgo:TextStage rdf:type owl:Class ;
+              rdfs:subClassOf tgo:Stage .
+
+
+###  http://www.hinkelmanns.at/tgo/Token
+tgo:Token rdf:type owl:Class ;
+          rdfs:subClassOf tgo:Node .
+
+
+###  http://www.hinkelmanns.at/tgo/Word
+tgo:Word rdf:type owl:Class ;
+         rdfs:subClassOf tgo:Token ;
+         dc:description "A segmented token on word level."@en ;
+         dc:title "Word"@en ;
+         rdfs:label "Word"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/WordConnector
+tgo:WordConnector rdf:type owl:Class ;
+                  rdfs:subClassOf tgo:Connector ;
+                  dc:description "Connector on word level."@en ;
+                  dc:title "Word Connector"@en ;
+                  rdfs:label "Word Connector"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/WordEnd
+tgo:WordEnd rdf:type owl:Class ;
+            rdfs:subClassOf tgo:End ;
+            dc:description "End node on word level."@en ;
+            dc:title "Word End"@en ;
+            rdfs:label "Word End"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/WordGroup
+tgo:WordGroup rdf:type owl:Class ;
+              rdfs:subClassOf tgo:Group ;
+              dc:description "A annotation ‘WordGroup’ of Words."@en ;
+              dc:title "Word Group"@en ;
+              rdfs:label "Word Group"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/WordStage
+tgo:WordStage rdf:type owl:Class ;
+              rdfs:subClassOf tgo:Stage ;
+              dc:description "A 'WordStage' represents a stage of a 'Word'."@en ;
+              dc:title "Word Stage"@en ;
+              rdfs:label "Word Stage"@en .
+
+
+###  http://www.hinkelmanns.at/tgo/WordStart
+tgo:WordStart rdf:type owl:Class ;
+              rdfs:subClassOf tgo:Start ;
+              dc:description "Start node on word level."@en ;
+              dc:title "Word Start"@en ;
+              rdfs:label "Word Start"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.hinkelmanns.at/tgo/Border
+tgo:Border rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/Connector
+tgo:Connector rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/End
+tgo:End rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/Group
+tgo:Group rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/Node
+tgo:Node rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/Path
+tgo:Path rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/Start
+tgo:Start rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/TextStage
+tgo:TextStage rdf:type owl:NamedIndividual .
+
+
+###  http://www.hinkelmanns.at/tgo/Token
+tgo:Token rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/oa#Annotation
+oa:Annotation rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/oa#hasBody
+oa:hasBody rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/ns/oa#hasTarget
+oa:hasTarget rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+tgo:Connector rdfs:label "Connector"@en ;
+              dc:description "A 'Connector' represents a weighted connection between two 'Node's."@en ;
+              dc:title "Connector"@en .
+
+
+tgo:End dc:description "The end point of a graph of tokens."@en ;
+        dc:title "End"@en ;
+        rdfs:label "End"@en .
+
+
+tgo:Group rdfs:label "Group"@en ;
+          dc:title "Group"@en ;
+          dc:description "A annotation ‘Group’ of Tokens."@en .
+
+
+tgo:Node dc:title "Node"@en ;
+         rdfs:label "Node"@en ;
+         dc:description "A 'Node' is the base class for all nodes of the text graph."@en .
+
+
+tgo:Start rdfs:label "Start"@en ;
+          dc:description "The start point of a graph of tokens."@en ;
+          dc:title "Start"@en .
+
+
+tgo:TextStage dc:description "A 'TextStage' represents a stage of a 'Text'."@en ;
+              rdfs:label "Text Stage"@en ;
+              dc:title "Text Stage"@en .
+
+
+tgo:Token rdfs:label "Token"@en ;
+          dc:description "A 'Token' is a separated entity of a larger instance."@en ;
+          dc:title "Token"@en .
+
+
+oa:hasBody rdfs:isDefinedBy oa: ;
+           rdfs:comment "The object of the relationship is a resource that is a body of the Annotation." .
+
+
+oa:hasTarget rdfs:comment "The relationship between an Annotation and its Target." ;
+             rdfs:isDefinedBy oa: .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
