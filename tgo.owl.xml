@@ -15,7 +15,6 @@
         <owl:versionIRI rdf:resource="http://www.hinkelmanns.at/tgo/0.1/"/>
         <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dc:title xml:lang="en">Text.Graph.Ontoloy</dc:title>
-        <dc:rights xml:lang="en">Copyright © 2019 Peter Hinkelmanns</dc:rights>
         <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
         <dc:description xml:lang="en">This is the Text.Graph.Ontology [TGO]. TGO is an approach to provide an ontology to encode linguistic historical text edition.</dc:description>
         <dc:identifier xml:lang="en">http://www.hinkelmanns.at/tgo</dc:identifier>
@@ -182,8 +181,8 @@
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/WordStart"/>
         <dc:description xml:lang="en">&apos;fromWord&apos; names the relation between a &apos;WordConnector&apos; and a &apos;WordStart&apos; node or &apos;Word&apos;.</dc:description>
-        <dc:title xml:lang="en">from Word</dc:title>
-        <rdfs:label xml:lang="en">from Word</rdfs:label>
+        <dc:title xml:lang="en">from word</dc:title>
+        <rdfs:label xml:lang="en">from word</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -194,8 +193,8 @@
         <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/CharacterGroup"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Character"/>
         <dc:description xml:lang="en">&apos;Character&apos; is part of &apos;CharacterGroup&apos;.</dc:description>
-        <dc:title xml:lang="en">is part of character group</dc:title>
-        <rdfs:label xml:lang="en">is part of character group</rdfs:label>
+        <dc:title xml:lang="en">part of character group</dc:title>
+        <rdfs:label xml:lang="en">part of character group</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -207,8 +206,8 @@
         <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Group"/>
         <dc:description xml:lang="en">The edge between a &apos;Token&apos; and a &apos;Group&apos;</dc:description>
-        <dc:title xml:lang="en">is part of group</dc:title>
-        <rdfs:label xml:lang="en">&apos;Token&apos; is part of &apos;Group&apos;.</rdfs:label>
+        <dc:title xml:lang="en">part of group</dc:title>
+        <rdfs:label xml:lang="en">part of group</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -221,7 +220,7 @@
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Stage"/>
         <dc:description xml:lang="en">The edge between a &apos;Connector&apos; and a &apos;Stage&apos;.</dc:description>
         <dc:title xml:lang="en">is part of stage</dc:title>
-        <rdfs:label xml:lang="en">is part of stage</rdfs:label>
+        <rdfs:label xml:lang="en">part of stage</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -244,8 +243,8 @@
         <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/WordGroup"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
         <dc:description xml:lang="en">&apos;Word&apos; is part of &apos;WordGroup&apos;.</dc:description>
-        <dc:title xml:lang="en">is part of word group</dc:title>
-        <rdfs:label xml:lang="en">is part of word group</rdfs:label>
+        <dc:title xml:lang="en">part of word group</dc:title>
+        <rdfs:label xml:lang="en">part of word group</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -310,8 +309,8 @@
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Character"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/CharacterEnd"/>
         <dc:description xml:lang="en">&apos;toCharacter&apos; names the relation between a &apos;CharacterConnector&apos; and a &apos;CharacterEnd&apos; node or &apos;Character&apos;.</dc:description>
-        <dc:title xml:lang="en">to Character</dc:title>
-        <rdfs:label xml:lang="en">to Character</rdfs:label>
+        <dc:title xml:lang="en">to character</dc:title>
+        <rdfs:label xml:lang="en">to character</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -324,8 +323,8 @@
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
         <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/WordEnd"/>
         <dc:description xml:lang="en">&apos;toWord&apos; names the relation between a &apos;WordConnector&apos; and a &apos;WordEnd&apos; node or &apos;Word&apos;.</dc:description>
-        <dc:title xml:lang="en">to Word</dc:title>
-        <rdfs:label xml:lang="en">to Word</rdfs:label>
+        <dc:title xml:lang="en">to word</dc:title>
+        <rdfs:label xml:lang="en">to word</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -348,8 +347,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <dc:description xml:lang="en">A &apos;weight&apos; of a connections is interpreted relative to the other connections starting from the same token.
 I.e. if a token has two connections with weight 1 and 2, the connection with weight 1 precedes the connection with weight 2.</dc:description>
-        <dc:title xml:lang="en">has weight</dc:title>
-        <rdfs:label xml:lang="en">has weight</rdfs:label>
+        <dc:title xml:lang="en">weight</dc:title>
+        <rdfs:label xml:lang="en">weight</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -521,8 +520,8 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordConnector">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
         <dc:description xml:lang="en">Connector on word level.</dc:description>
-        <dc:title xml:lang="en">Word connector</dc:title>
-        <rdfs:label xml:lang="en">Word connector</rdfs:label>
+        <dc:title xml:lang="en">Word Connector</dc:title>
+        <rdfs:label xml:lang="en">Word Connector</rdfs:label>
     </owl:Class>
     
 
@@ -532,8 +531,8 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordEnd">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/End"/>
         <dc:description xml:lang="en">End node on word level.</dc:description>
-        <dc:title xml:lang="en">Word end</dc:title>
-        <rdfs:label xml:lang="en">Word end</rdfs:label>
+        <dc:title xml:lang="en">Word End</dc:title>
+        <rdfs:label xml:lang="en">Word End</rdfs:label>
     </owl:Class>
     
 
@@ -565,8 +564,8 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordStart">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Start"/>
         <dc:description xml:lang="en">Start node on word level.</dc:description>
-        <dc:title xml:lang="en">Word start</dc:title>
-        <rdfs:label xml:lang="en">Word start</rdfs:label>
+        <dc:title xml:lang="en">Word Start</dc:title>
+        <rdfs:label xml:lang="en">Word Start</rdfs:label>
     </owl:Class>
     
 
