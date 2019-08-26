@@ -39,6 +39,12 @@ The first problem which needs to be addressed is the segmentation of a text. The
 
 The proposals for the annotation of text revisions of the Grazer Editionsphilogie are tailored to the needs of mediaeval editions. Hofmeister-Winter 2016 presents a categorization of text revision phenomena. She distinguishes between self-revisions, i.e. interventions in one's own text, and external revisions, which describe the interventions of another hand (Hofmeister-Winter 2016, 10). Self-revisions can be a direct component of text production (immediate revision) or take place at a later point in time (late revision). In their opinion, third-party revisions, on the other hand, take place exclusively in a later revision step as a late revision.
 
+TGO uses an edge weighted directed acyclic graph to represent text. To enable the use of weight in a RDF-enviroment, the weighted edges are realised as nodes.
+
+#### Basics
+
+
+
 ### References
 
 Andrews, T. L., and C. Mace. 2013. “Beyond the Tree of Texts: Building an Empirical Model of Scribal Variation Through Graph Analysis of Texts and Stemmata.” _International Journal of Human-Computer Studies_ 28 (4): 504–21. doi:10.1093/llc/fqt032.
