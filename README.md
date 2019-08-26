@@ -35,7 +35,7 @@ This very brief overview of selected data models for textual representation has 
 
 The Semantic Web makes information accessible in a machine-readable way using standardized vocabularies and ontologies.  A distinction is made between ‘nodes’, which can be objects or atomic values, and ‘edges’, which describe the relationship between nodes. A statement always consists of a triple ‘[subject] - [predicate] - [object]’. Semantic Web technologies enable easy annotating and linking the scholarly genetic edition other resources. The Text Graph Ontology uses the Web Ontology Language (OWL: W3C OWL Working Group 2012) to specify classes and properties.
 
-![Basic](diagrams/tgo-diagrams-Basic%20RDF.png)
+![Basic](diagrams/tgo-diagrams-Basics.png)
 
 The first problem which needs to be addressed is the segmentation of a text. There is no agreement between the briefly presented models on what the atomic unit of a text graph is. For the Text Graph Ontology tokens separated by white space should be assumed, with the possibility to extend the model on a sub token level. A diplomatic transcription and various normalization stages can be attached to a token as a string or generatet from a separated character graph.
 
@@ -44,8 +44,28 @@ The proposals for the annotation of text revisions of the Grazer Editionsphilogi
 TGO uses an edge weighted directed acyclic graph to represent text. To enable the use of weight in a RDF-enviroment, the weighted edges are realised as nodes.
 
 #### Basics
+![Basic](diagrams/tgo-diagrams-Basic%20RDF.png)
+
+The basic graph of tokens consits of the *Token*, *Start*, *End* and *Connector* classes. 
 
 
+|    Classes       |    Description                                                            |
+|------------------|---------------------------------------------------------------------------|
+|    :Token        |    A 'Token' is a separated entity of a   larger instance.                |
+|    :Start        |    The start point of a graph of tokens.                                  |
+|    :End          |    The end point of a graph of tokens.                                    |
+|    :Connector    |    A 'Connector' represents a weighted   connection between two nodes.    |
+
+To form the connection between to tokens, the properties *from*, *to* and *weight* are needed
+
+|    Object Properties    |    Description                                        |
+|-------------------------|-------------------------------------------------------|
+|    :from                |    Domain ‘:Connector’;   Range ‘:Start’, ‘:Token’    |
+|    :to                  |    Domain ‘:Connector’;   Range ‘:End’, ‘:Token’      |
+
+|    Data Property    |    Description                               |
+|---------------------|----------------------------------------------|
+|    :weight          |    Domain ‘:Connector’;   Range ‘xsd:int’    |
 
 ### References
 
