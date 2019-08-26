@@ -11,7 +11,7 @@ Ontology versions:
 
 ## Description
 
-### Abstract 
+### *Abstract*
 
 *A model of text as a variant graph can support representing genetic text editions. The proposed model makes it possible to describe the relations between tokens and their relative dependencies in text genesis. The main focus is on the representation of intradocumentary text revisions. Moreover the Text-Graph-Ontology enables the referencing of genetic text editions via the Semantic Web.*
 
