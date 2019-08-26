@@ -1,0 +1,711 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.hinkelmanns.at/tgo/"
+     xml:base="http://www.hinkelmanns.at/tgo/"
+     xmlns:oa="http://www.w3.org/ns/oa#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tgo="http://www.hinkelmanns.at/tgo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.hinkelmanns.at/tgo/">
+        <owl:versionIRI rdf:resource="http://www.hinkelmanns.at/tgo/0.1/"/>
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dc:title xml:lang="en">Text.Graph.Ontoloy</dc:title>
+        <owl:versionInfo xml:lang="en">0.1</owl:versionInfo>
+        <dc:description xml:lang="en">This is the Text.Graph.Ontology [TGO]. TGO is an approach to provide an ontology to encode linguistic historical text edition.</dc:description>
+        <dc:identifier xml:lang="en">http://www.hinkelmanns.at/tgo</dc:identifier>
+        <dc:creator xml:lang="en">Peter Hinkelmanns</dc:creator>
+        <rdfs:label xml:lang="en">Text.Graph.Ontoloy</rdfs:label>
+        <dc:date xml:lang="en">2019-08-26</dc:date>
+        <dc:creator rdf:resource="https://orcid.org/0000-0001-8618-0185"/>
+        <dcterms:modified xml:lang="en">2019-08-26</dcterms:modified>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+
+
+    <!-- http://www.w3.org/2002/07/owl#sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
+
+
+
+    <!-- http://www.w3.org/ns/oa#hasBody -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:AnnotationProperty>
+
+
+
+    <!-- http://www.w3.org/ns/oa#hasTarget -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+    </owl:AnnotationProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/endOfText -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/endOfText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/WordEnd"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Text"/>
+        <dc:description xml:lang="en">&apos;endOfText&apos; marks a &apos;WordEnd&apos; by refering to a &apos;Text&apos; as the end of this &apos;Text&apos;.</dc:description>
+        <dc:title xml:lang="en">end of text</dc:title>
+        <rdfs:label xml:lang="en">end of text</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/endOfWord -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/endOfWord">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/CharacterEnd"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
+        <dc:description xml:lang="en">&apos;endOf&apos;Word&apos; marks a &apos;CharacterEnd&apos; by refering to a &apos;Word&apos; as the end of this &apos;Word&apos;.</dc:description>
+        <dc:title xml:lang="en">end of word</dc:title>
+        <rdfs:label xml:lang="en">end of word</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/from -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/from">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Start"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+        <dc:description xml:lang="en">&apos;from&apos; names the relation between a connector and a &apos;start&apos; node or &apos;token&apos;.</dc:description>
+        <dc:title xml:lang="en">from</dc:title>
+        <rdfs:label xml:lang="en">from</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/fromCharacter -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/fromCharacter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/CharacterConnector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Character"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/CharacterStart"/>
+        <dc:description xml:lang="en">&apos;fromCharacter&apos; names the relation between a &apos;CharacterConnector&apos; and a &apos;CharacterStart&apos; node or &apos;Character&apos;.</dc:description>
+        <dc:title xml:lang="en">from Character</dc:title>
+        <rdfs:label xml:lang="en">from Character</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/fromWord -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/fromWord">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/WordConnector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/WordStart"/>
+        <dc:description xml:lang="en">&apos;fromWord&apos; names the relation between a &apos;WordConnector&apos; and a &apos;WordStart&apos; node or &apos;Word&apos;.</dc:description>
+        <dc:title xml:lang="en">from word</dc:title>
+        <rdfs:label xml:lang="en">from word</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/partOfCharacterGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/partOfCharacterGroup">
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/CharacterGroup"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Character"/>
+        <dc:description xml:lang="en">&apos;Character&apos; is part of &apos;CharacterGroup&apos;.</dc:description>
+        <dc:title xml:lang="en">part of character group</dc:title>
+        <rdfs:label xml:lang="en">part of character group</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/partOfGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/partOfGroup">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Group"/>
+        <dc:description xml:lang="en">The edge between a &apos;Token&apos; and a &apos;Group&apos;</dc:description>
+        <dc:title xml:lang="en">part of group</dc:title>
+        <rdfs:label xml:lang="en">part of group</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/partOfStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/partOfStage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Stage"/>
+        <dc:description xml:lang="en">The edge between a &apos;Connector&apos; and a &apos;Stage&apos;.</dc:description>
+        <dc:title xml:lang="en">is part of stage</dc:title>
+        <rdfs:label xml:lang="en">part of stage</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/partOfTextStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/partOfTextStage">
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/WordConnector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/TextStage"/>
+        <dc:description xml:lang="en">The edge between a &apos;WordConnector&apos; and a &apos;TextStage&apos;.</dc:description>
+        <dc:identifier xml:lang="en">part of text stage</dc:identifier>
+        <rdfs:label xml:lang="en">part of text stage</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/partOfWordGroup -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/partOfWordGroup">
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/WordGroup"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
+        <dc:description xml:lang="en">&apos;Word&apos; is part of &apos;WordGroup&apos;.</dc:description>
+        <dc:title xml:lang="en">part of word group</dc:title>
+        <rdfs:label xml:lang="en">part of word group</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/partOfWordStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/partOfWordStage">
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/CharacterConnector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/WordStage"/>
+        <dc:description xml:lang="en">The edge between a &apos;CharacterConnector&apos; and a &apos;WordStage&apos;.</dc:description>
+        <dc:title xml:lang="en">part of word stage</dc:title>
+        <rdfs:label xml:lang="en">part of word stage</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/startOfText -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/startOfText">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/WordStart"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Text"/>
+        <dc:description xml:lang="en">&apos;startOfText&apos; marks a &apos;WordStart&apos; by refering to a &apos;Text&apos; as the start of this &apos;Text&apos;.</dc:description>
+        <dc:title xml:lang="en">start of text</dc:title>
+        <rdfs:label xml:lang="en">start of text</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/startOfWord -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/startOfWord">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/CharacterStart"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
+        <dc:description xml:lang="en">&apos;startOf&apos;Word&apos; marks a &apos;CharacterStart&apos; by refering to a &apos;Word&apos; as the start of this &apos;Word&apos;.</dc:description>
+        <dc:title xml:lang="en">start of word</dc:title>
+        <rdfs:label xml:lang="en">start of word</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/to -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/End"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+        <dc:description xml:lang="en">&apos;to&apos; names the relation between a connector and a &apos;end&apos; node or &apos;token&apos;.</dc:description>
+        <dc:title xml:lang="en">to</dc:title>
+        <rdfs:label xml:lang="en">to</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/toCharacter -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/toCharacter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/CharacterConnector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Character"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/CharacterEnd"/>
+        <dc:description xml:lang="en">&apos;toCharacter&apos; names the relation between a &apos;CharacterConnector&apos; and a &apos;CharacterEnd&apos; node or &apos;Character&apos;.</dc:description>
+        <dc:title xml:lang="en">to character</dc:title>
+        <rdfs:label xml:lang="en">to character</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/toWord -->
+
+    <owl:ObjectProperty rdf:about="http://www.hinkelmanns.at/tgo/toWord">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/WordConnector"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/Word"/>
+        <rdfs:range rdf:resource="http://www.hinkelmanns.at/tgo/WordEnd"/>
+        <dc:description xml:lang="en">&apos;toWord&apos; names the relation between a &apos;WordConnector&apos; and a &apos;WordEnd&apos; node or &apos;Word&apos;.</dc:description>
+        <dc:title xml:lang="en">to word</dc:title>
+        <rdfs:label xml:lang="en">to word</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.hinkelmanns.at/tgo/weight">
+        <rdfs:domain rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <dc:description xml:lang="en">A &apos;weight&apos; of a connections is interpreted relative to the other connections starting from the same token.
+I.e. if a token has two connections with weight 1 and 2, the connection with weight 1 precedes the connection with weight 2.</dc:description>
+        <dc:title xml:lang="en">weight</dc:title>
+        <rdfs:label xml:lang="en">weight</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Character -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Character">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+        <dc:description xml:lang="en">A segmented &apos;character&apos; including diacritics or abbreviations on token level.</dc:description>
+        <dc:title xml:lang="en">Character</dc:title>
+        <rdfs:label xml:lang="en">Character</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/CharacterConnector -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/CharacterConnector">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <dc:description xml:lang="en">Connector on character level.</dc:description>
+        <dc:title xml:lang="en">Character Connector</dc:title>
+        <rdfs:label xml:lang="en">Character Connector</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/CharacterEnd -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/CharacterEnd">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/End"/>
+        <dc:description xml:lang="en">End node on character level.</dc:description>
+        <dc:title xml:lang="en">Character End</dc:title>
+        <rdfs:label xml:lang="en">Character End</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/CharacterGroup -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/CharacterGroup">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Group"/>
+        <dc:description xml:lang="en">A annotation ‘CharacterGroup’ of Characters.</dc:description>
+        <dc:title xml:lang="en">Character Group</dc:title>
+        <rdfs:label xml:lang="en">Character Group</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/CharacterStart -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/CharacterStart">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Start"/>
+        <dc:description xml:lang="en">Start node on character level.</dc:description>
+        <dc:title xml:lang="en">Character Start</dc:title>
+        <rdfs:label xml:lang="en">Character Start</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Connector -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Connector">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/to"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.hinkelmanns.at/tgo/weight"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/End -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/End">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Group -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Group"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Node -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Node"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Stage -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Stage">
+        <dc:description xml:lang="en">A &apos;Stage&apos; represents a stage of an instance.</dc:description>
+        <dc:title xml:lang="en">Stage</dc:title>
+        <rdfs:label xml:lang="en">Stage</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Start -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Start">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Text -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Text">
+        <dc:description xml:lang="en">Basic node for a text.</dc:description>
+        <dc:title xml:lang="en">Text</dc:title>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/TextStage -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/TextStage">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Stage"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Token -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Token">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Word -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Word">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Token"/>
+        <dc:description xml:lang="en">A segmented token on word level.</dc:description>
+        <dc:title xml:lang="en">Word</dc:title>
+        <rdfs:label xml:lang="en">Word</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/WordConnector -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordConnector">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Connector"/>
+        <dc:description xml:lang="en">Connector on word level.</dc:description>
+        <dc:title xml:lang="en">Word Connector</dc:title>
+        <rdfs:label xml:lang="en">Word Connector</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/WordEnd -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordEnd">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/End"/>
+        <dc:description xml:lang="en">End node on word level.</dc:description>
+        <dc:title xml:lang="en">Word End</dc:title>
+        <rdfs:label xml:lang="en">Word End</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/WordGroup -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordGroup">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Group"/>
+        <dc:description xml:lang="en">A annotation ‘WordGroup’ of Words.</dc:description>
+        <dc:title xml:lang="en">Word Group</dc:title>
+        <rdfs:label xml:lang="en">Word Group</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/WordStage -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordStage">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Stage"/>
+        <dc:description xml:lang="en">A &apos;WordStage&apos; represents a stage of a &apos;Word&apos;.</dc:description>
+        <dc:title xml:lang="en">Word Stage</dc:title>
+        <rdfs:label xml:lang="en">Word Stage</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/WordStart -->
+
+    <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/WordStart">
+        <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Start"/>
+        <dc:description xml:lang="en">Start node on word level.</dc:description>
+        <dc:title xml:lang="en">Word Start</dc:title>
+        <rdfs:label xml:lang="en">Word Start</rdfs:label>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Border -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Border"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Connector -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Connector"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/End -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/End"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Group -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Group"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Node -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Node"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Path -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Path"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Start -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Start"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/TextStage -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/TextStage"/>
+
+
+
+    <!-- http://www.hinkelmanns.at/tgo/Token -->
+
+    <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Token"/>
+
+
+
+    <!-- http://www.w3.org/ns/oa#Annotation -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#Annotation"/>
+
+
+
+    <!-- http://www.w3.org/ns/oa#hasBody -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasBody"/>
+
+
+
+    <!-- http://www.w3.org/ns/oa#hasTarget -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasTarget"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.hinkelmanns.at/tgo/Connector">
+        <rdfs:label xml:lang="en">Connector</rdfs:label>
+        <dc:description xml:lang="en">A &apos;Connector&apos; represents a weighted connection between two &apos;Node&apos;s.</dc:description>
+        <dc:title xml:lang="en">Connector</dc:title>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.hinkelmanns.at/tgo/End">
+        <dc:description xml:lang="en">The end point of a graph of tokens.</dc:description>
+        <dc:title xml:lang="en">End</dc:title>
+        <rdfs:label xml:lang="en">End</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.hinkelmanns.at/tgo/Group">
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+        <dc:title xml:lang="en">Group</dc:title>
+        <dc:description xml:lang="en">A annotation ‘Group’ of Tokens.</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.hinkelmanns.at/tgo/Node">
+        <dc:title xml:lang="en">Node</dc:title>
+        <rdfs:label xml:lang="en">Node</rdfs:label>
+        <dc:description xml:lang="en">A &apos;Node&apos; is the base class for all nodes of the text graph.</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.hinkelmanns.at/tgo/Start">
+        <rdfs:label xml:lang="en">Start</rdfs:label>
+        <dc:description xml:lang="en">The start point of a graph of tokens.</dc:description>
+        <dc:title xml:lang="en">Start</dc:title>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.hinkelmanns.at/tgo/TextStage">
+        <dc:description xml:lang="en">A &apos;TextStage&apos; represents a stage of a &apos;Text&apos;.</dc:description>
+        <rdfs:label xml:lang="en">Text Stage</rdfs:label>
+        <dc:title xml:lang="en">Text Stage</dc:title>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.hinkelmanns.at/tgo/Token">
+        <rdfs:label xml:lang="en">Token</rdfs:label>
+        <dc:description xml:lang="en">A &apos;Token&apos; is a separated entity of a larger instance.</dc:description>
+        <dc:title xml:lang="en">Token</dc:title>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/oa#"/>
+        <rdfs:comment>The object of the relationship is a resource that is a body of the Annotation.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/ns/oa#hasTarget">
+        <rdfs:comment>The relationship between an Annotation and its Target.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/oa#"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
