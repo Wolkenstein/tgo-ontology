@@ -67,6 +67,78 @@ To form the connection between to tokens, the properties *from*, *to* and *weigh
 |---------------------|----------------------------------------------|
 |    :weight          |    Domain ‘:Connector’;   Range ‘xsd:int’    |
 
+#### Test Stages
+![Text Stages](diagrams/tgo-diagrams-Text%20Stages.png)
+
+A stage of a text represents a defined path from start to end.
+
+The following classes and properties are introduced:
+
+|    Classes    |    Description                                       |
+|---------------|------------------------------------------------------|
+|    :Stage     |    A 'Stage' represents a stage of an   instance.    |
+
+|    Object Properties    |    Description                              |
+|-------------------------|---------------------------------------------|
+|    :partOfStage         |    Domain ‘:Connector’;   Range ‘:Stage’    |
+
+#### Annotation Groups
+![Annotation Groups](diagrams/tgo-diagrams-Text%20Stages.png)
+
+Annotation groups consist of tokens.
+
+|    Classes    |    Description                        |
+|---------------|---------------------------------------|
+|    :Group     |    A annotation ‘Group’ of Tokens.    |
+
+|    Object Properties    |    Description                          |
+|-------------------------|-----------------------------------------|
+|    :partOfGroup         |    Domain ‘:Token’;   Range ‘:Group’    |
+
+#### Text Segmentation
+![Annotation Groups](diagrams/tgo-diagrams-Text%20Segmentation.png)
+
+As stated before, the segmentation of a text is an essential question for the design of the ontology. Therefore a specific class *Text* and a *Word* with corresponding *WordConnector*s is introduced to descripe a text more specific.
+
+|    Classes           |    Description                         |
+|----------------------|----------------------------------------|
+|    :Text             |    Basic node for a text.              |
+|    :Word             |    A segmented token on word level.    |
+|    :WordStart        |    Start node on word level.           |
+|    :WordEnd          |    End node on word level.             |
+|    :WordConnector    |    Connector on word level.            |
+
+|    Object Properties    |    Description                                                 |
+|-------------------------|----------------------------------------------------------------|
+|    :fromWord            |    Domain ‘:WordConnector’;   Range ‘:Word’,   ‘:WordStart’    |
+|    :toWord              |    Domain ‘:WordConnector’;   Range ‘:Word’,   ‘:WordEnd’      |
+|    :startOfText         |    Domain ‘:WordStart’;   Range ‘:Text’                        |
+|    :endOfText           |    Domain ‘:WordEnd’;   Range ‘:Text’                          |
+
+#### Text Segmentation
+![Annotation Groups](diagrams/tgo-diagrams-Character%20Level.png)
+
+The other segmenation available in TGO are *Character*s.
+
+|                       |                                                                                    |
+|-----------------------|------------------------------------------------------------------------------------|
+|    Classes            |    Description                                                                     |
+|    :Character         |    A segmented character including   diacritics or abbreviations on token level    |
+|    :CharacterStart    |    Start node on character   level                                                 |
+|    :CharacterEnd      |    End node on character level                                                     |
+
+|    Object Properties    |    Description                                                           |
+|-------------------------|--------------------------------------------------------------------------|
+|    :fromCharacter       |    Domain ‘:WordConnector’;   Range ‘:Character’,   ‘:CharacterStart’    |
+|    :toCharacter         |    Domain ‘:WordConnector’;   Range ‘:Character’,   ‘:CharacterEnd’      |
+|    :startOfWord         |    Domain ‘:CharacterStart’;   Range ‘:Word’                             |
+|    :endOfWord           |    Domain ‘:CharacterEnd’;   Range ‘:Word’                               |
+
+### End
+
+For more details please read the documentation and/or contact the author.
+
+
 ### References
 
 Andrews, T. L., and C. Mace. 2013. “Beyond the Tree of Texts: Building an Empirical Model of Scribal Variation Through Graph Analysis of Texts and Stemmata.” _International Journal of Human-Computer Studies_ 28 (4): 504–21. doi:10.1093/llc/fqt032.
