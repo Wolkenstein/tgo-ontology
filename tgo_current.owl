@@ -24,10 +24,10 @@
         <dc:creator rdf:resource="https://orcid.org/0000-0001-8618-0185"/>
         <dcterms:modified xml:lang="en">2019-08-26</dcterms:modified>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -35,61 +35,61 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://creativecommons.org/ns#license -->
 
     <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/identifier -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-
+    
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-
+    
 
 
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-
+    
 
 
     <!-- http://www.w3.org/2002/07/owl#sameAs -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameAs"/>
-
+    
 
 
     <!-- http://www.w3.org/ns/oa#hasBody -->
@@ -97,7 +97,7 @@
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/oa#hasBody">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
     </owl:AnnotationProperty>
-
+    
 
 
     <!-- http://www.w3.org/ns/oa#hasTarget -->
@@ -105,10 +105,10 @@
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
     </owl:AnnotationProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -116,7 +116,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/endOfText -->
@@ -129,7 +129,7 @@
         <dc:title xml:lang="en">end of text</dc:title>
         <rdfs:label xml:lang="en">end of text</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/endOfWord -->
@@ -142,7 +142,7 @@
         <dc:title xml:lang="en">end of word</dc:title>
         <rdfs:label xml:lang="en">end of word</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/from -->
@@ -156,7 +156,7 @@
         <dc:title xml:lang="en">from</dc:title>
         <rdfs:label xml:lang="en">from</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/fromCharacter -->
@@ -170,7 +170,7 @@
         <dc:title xml:lang="en">from Character</dc:title>
         <rdfs:label xml:lang="en">from Character</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/fromWord -->
@@ -184,7 +184,7 @@
         <dc:title xml:lang="en">from word</dc:title>
         <rdfs:label xml:lang="en">from word</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/partOfCharacterGroup -->
@@ -196,7 +196,7 @@
         <dc:title xml:lang="en">part of character group</dc:title>
         <rdfs:label xml:lang="en">part of character group</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/partOfGroup -->
@@ -209,7 +209,7 @@
         <dc:title xml:lang="en">part of group</dc:title>
         <rdfs:label xml:lang="en">part of group</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/partOfStage -->
@@ -222,7 +222,7 @@
         <dc:title xml:lang="en">is part of stage</dc:title>
         <rdfs:label xml:lang="en">part of stage</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/partOfTextStage -->
@@ -234,7 +234,7 @@
         <dc:identifier xml:lang="en">part of text stage</dc:identifier>
         <rdfs:label xml:lang="en">part of text stage</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/partOfWordGroup -->
@@ -246,7 +246,7 @@
         <dc:title xml:lang="en">part of word group</dc:title>
         <rdfs:label xml:lang="en">part of word group</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/partOfWordStage -->
@@ -258,7 +258,7 @@
         <dc:title xml:lang="en">part of word stage</dc:title>
         <rdfs:label xml:lang="en">part of word stage</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/startOfText -->
@@ -271,7 +271,7 @@
         <dc:title xml:lang="en">start of text</dc:title>
         <rdfs:label xml:lang="en">start of text</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/startOfWord -->
@@ -284,7 +284,7 @@
         <dc:title xml:lang="en">start of word</dc:title>
         <rdfs:label xml:lang="en">start of word</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/to -->
@@ -298,7 +298,7 @@
         <dc:title xml:lang="en">to</dc:title>
         <rdfs:label xml:lang="en">to</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/toCharacter -->
@@ -312,7 +312,7 @@
         <dc:title xml:lang="en">to character</dc:title>
         <rdfs:label xml:lang="en">to character</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/toWord -->
@@ -326,10 +326,10 @@
         <dc:title xml:lang="en">to word</dc:title>
         <rdfs:label xml:lang="en">to word</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -337,7 +337,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/weight -->
@@ -350,10 +350,10 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">weight</dc:title>
         <rdfs:label xml:lang="en">weight</rdfs:label>
     </owl:DatatypeProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -361,7 +361,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Character -->
@@ -372,7 +372,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Character</dc:title>
         <rdfs:label xml:lang="en">Character</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/CharacterConnector -->
@@ -383,7 +383,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Character Connector</dc:title>
         <rdfs:label xml:lang="en">Character Connector</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/CharacterEnd -->
@@ -394,7 +394,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Character End</dc:title>
         <rdfs:label xml:lang="en">Character End</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/CharacterGroup -->
@@ -405,7 +405,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Character Group</dc:title>
         <rdfs:label xml:lang="en">Character Group</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/CharacterStart -->
@@ -416,7 +416,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Character Start</dc:title>
         <rdfs:label xml:lang="en">Character Start</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Connector -->
@@ -437,7 +437,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/End -->
@@ -445,19 +445,19 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/End">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Group -->
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Group"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Node -->
 
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Node"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Stage -->
@@ -467,7 +467,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Stage</dc:title>
         <rdfs:label xml:lang="en">Stage</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Start -->
@@ -475,7 +475,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Start">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Text -->
@@ -485,7 +485,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Text</dc:title>
         <rdfs:label xml:lang="en">Text</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/TextStage -->
@@ -493,7 +493,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/TextStage">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Stage"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Token -->
@@ -501,7 +501,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     <owl:Class rdf:about="http://www.hinkelmanns.at/tgo/Token">
         <rdfs:subClassOf rdf:resource="http://www.hinkelmanns.at/tgo/Node"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Word -->
@@ -512,7 +512,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Word</dc:title>
         <rdfs:label xml:lang="en">Word</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/WordConnector -->
@@ -523,7 +523,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Word Connector</dc:title>
         <rdfs:label xml:lang="en">Word Connector</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/WordEnd -->
@@ -534,7 +534,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Word End</dc:title>
         <rdfs:label xml:lang="en">Word End</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/WordGroup -->
@@ -545,7 +545,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Word Group</dc:title>
         <rdfs:label xml:lang="en">Word Group</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/WordStage -->
@@ -556,7 +556,7 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Word Stage</dc:title>
         <rdfs:label xml:lang="en">Word Stage</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/WordStart -->
@@ -567,10 +567,10 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
         <dc:title xml:lang="en">Word Start</dc:title>
         <rdfs:label xml:lang="en">Word Start</rdfs:label>
     </owl:Class>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -578,82 +578,82 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Border -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Border"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Connector -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Connector"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/End -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/End"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Group -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Group"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Node -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Node"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Path -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Path"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Start -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Start"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/TextStage -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/TextStage"/>
-
+    
 
 
     <!-- http://www.hinkelmanns.at/tgo/Token -->
 
     <owl:NamedIndividual rdf:about="http://www.hinkelmanns.at/tgo/Token"/>
-
+    
 
 
     <!-- http://www.w3.org/ns/oa#Annotation -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#Annotation"/>
-
+    
 
 
     <!-- http://www.w3.org/ns/oa#hasBody -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasBody"/>
-
+    
 
 
     <!-- http://www.w3.org/ns/oa#hasTarget -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/oa#hasTarget"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
@@ -709,3 +709,4 @@ I.e. if a token has two connections with weight 1 and 2, the connection with wei
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
